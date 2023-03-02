@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+
+<body>
+    <script>
+        function pertenceFibonacci(numero) {
+            let a = 0;
+            let b = 1;
+
+            while (b < numero) {
+                let aux = b;
+                b = a + b;
+                a = aux;
+                console.log(b);
+            }
+
+            if (b === numero) {
+                console.log(`${numero} pertence à sequência de Fibonacci.`);
+            } else {
+                console.log(`${numero} não pertence à sequência de Fibonacci.`);
+            }
+        }
+
+        pertenceFibonacci(21);
+        pertenceFibonacci(7); 
+    </script>
+</body>
+
+</html>
